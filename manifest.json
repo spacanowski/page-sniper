@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "Confitura monitor",
+  "description": "Confitura monitor",
+  "version": "1.2",
+
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "http://2015.confitura.pl/",
+    "http://*/*", "https://*/*"
+  ],
+  "background": {
+    "scripts": ["sniper.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {     
+        "matches": ["http://2015.confitura.pl/"],
+        "js": ["cont.js"],
+        "run_at": "document_end",
+        "all_frames": true
+    }
+  ]
+}
