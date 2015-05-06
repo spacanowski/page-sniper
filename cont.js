@@ -1,3 +1,3 @@
-chrome.runtime.sendMessage({pageCont: document.documentElement.innerHTML}, function(response) {
+chrome.runtime.sendMessage({pageCont: document.body.innerHTML}, function(response) {
   console.log(response.farewell);
 });
